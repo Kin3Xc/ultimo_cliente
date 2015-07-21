@@ -14,7 +14,7 @@ app.controller('HomeCtrl', ['$scope', 'localStorageService','Cuenta', '$location
 
 	// función que retorna true o false indicando si un usuario esta autenticado o no
 	$scope.autenticar = function() {
-      return $auth.isAuthenticated();
+      // return $auth.isAuthenticated();
     };
 
     // redirige al home de la aplicacion
@@ -76,7 +76,7 @@ app.controller('cotizadorController', ['$scope', '$http', 'Compra', '$location',
 			//Ejecuto un retardo para que se me cargue la distancia en la vista
 			setTimeout(function(){
 				$scope.$apply(function(){
-					$scope.distancia=$scope.distancia;
+					$scope.distancia = $scope.distancia;
 				})
 			}, 100);
 		});
@@ -85,7 +85,7 @@ app.controller('cotizadorController', ['$scope', '$http', 'Compra', '$location',
 		// SIN PROBAR AUN!!!
 		// paso al scope todas las empresas que me trajo el servicio, para poder mostrarlos en la vista
 		$scope.empresas = emp_domiciliarios;
-
+	};
 
 	//Funcion para pasar los datos del servicios seleccionado por
 	//el usuario a la siguiente vista donde realizará la validación
@@ -113,7 +113,7 @@ app.controller('RegistroCtrl',['$scope', '$http', 'emp_domiciliarios', function(
 		console.log($scope.empresa);
 		// con el metodo .$add agrego una nueva empresa pasandole como parametro el objeto correspondiente
 		// empresas_domiciliarios.$add({$scope.empresa});
-		$scope.empresas.$add({$scope.empresa});
+		// $scope.empresas.$add({$scope.empresa})
 	};
 }]);
 //Fin controller empresa
@@ -232,7 +232,7 @@ app.controller('SignUpController', ['$scope', '$location', function($scope, $loc
 }]);
 
 // para ingresar al sistema sesión user
-app.controller('LoginController', ['$scope', '$auth', '$location', 'Compra', 'localStorageService', function($scope, $auth, $location, Compra, localStorageService){
+app.controller('LoginController', ['$scope', '$location', 'Compra', 'localStorageService', function($scope, $location, Compra, localStorageService){
 	var vm = this;
 
 	this.login = function(){

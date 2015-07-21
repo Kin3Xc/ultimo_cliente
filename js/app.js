@@ -2,8 +2,8 @@
 var app = angular.module('domisilapp', ['domisilapp.controllers', 'domisilapp.services']);
 
 //Configuración de rutas de la aplicacion web
-app.config(function($stateProvider, $authProvider, $urlRouterProvider){
-	
+app.config(function($stateProvider, $urlRouterProvider){
+
 
 	$urlRouterProvider.otherwise('/');
 
