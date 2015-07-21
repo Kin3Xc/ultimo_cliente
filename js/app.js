@@ -61,8 +61,6 @@ app.config(function($stateProvider, $urlRouterProvider){
 		});
 });
 
-app.set('port', (process.env.PORT || 5000));
-
 
 
 
